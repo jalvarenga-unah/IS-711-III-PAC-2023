@@ -7,6 +7,6 @@
 
 ## Responsable
 
-Ing. Juan E. Alvarenga - juan.alvarenga@ess.hn
+Ing. Juan E. Alvarenga - jealvarengar@unah.edu.hn
 
 <img  alt="GIF" src="https://raw.githubusercontent.com/haoruilee/haoruilee/master/pic/pusheencode.gif" />
