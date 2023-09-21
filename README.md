@@ -17,6 +17,10 @@ Ing. Juan E. Alvarenga - jealvarengar@unah.edu.hn
 - Git: [https://git-scm.com/downloads]
 - node JS: [https://nodejs.org/es]
 
+## Enlaces de interes
+- MDN: [https://developer.mozilla.org/es/docs/Web/HTML]
+- W3School: [https://www.w3schools.com/html/]
+
 ## Para clonar el repositorio
 
 Ejecutar el siguiente comando desde la consola de su computadora (despues de haber instalado git)
