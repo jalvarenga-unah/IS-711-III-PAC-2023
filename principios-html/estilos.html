@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 1rem = 16px  -->
+<!-- 1em = 16px -->
 
 <head>
     <meta charset="UTF-8">
@@ -7,11 +9,16 @@
     <title>Estilos CSS</title>
 
     <style>
+        html {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
 
-        body{
+        body {
             /* margin: auto; */
             /* margin: 0 auto 0 auto; */
-            margin: 0 auto ;
+            margin: 0 auto;
             width: 50%;
             background-color: #252525;
         }
@@ -20,32 +27,37 @@
             color: rgb(63, 81, 181);
             font-family: system-ui, -apple-system, sans-serif;
             font-style: italic;
+            font-size: 2.5rem;
         }
 
-        p{
+        p {
             color: #FAFAFA !important;
             font-family: system-ui, -apple-system, sans-serif;
             font-weight: bold;
             text-align: justify;
         }
+
         /* CLases de CSS */
 
-        .estilo-titulo{
-            font-size: 2rem;
+        .estilo-titulo {
+            font-size: 2em;
             color: #FAFAFA;
             font-family: system-ui, -apple-system, sans-serif;
             font-weight: bold;
             text-align: center;
-        }  
+        }
 
-        .margin{
+        .margin {
             margin: 0 4rem;
         }
 
-        .margin-top{
+        .margin-top {
             margin-top: 4rem;
         }
 
+        .estilo-parrafo {
+            font-size: 1.5em;
+        }
     </style>
 </head>
 
@@ -53,23 +65,43 @@
 
     <h1>Estilos CSS</h1>
 
-    <p style="color: aqua;" class="estilo-titulo margin">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt quisquam dolorum mollitia
-        accusantium magni quidem voluptas, sit porro est. Dolorum debitis consequuntur necessitatibus assumenda fugiat
-        expedita ea molestias minus!
-    </p>
+    <div style="font-size: 18px;">
 
-    <p class="margin margin-top">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt quisquam dolorum mollitia
-        accusantium magni quidem voluptas, sit porro est. Dolorum debitis consequuntur necessitatibus assumenda fugiat
-        expedita ea molestias minus!
-    </p>
+        <p style="color: aqua;" class="estilo-titulo margin">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt quisquam dolorum mollitia
+            accusantium magni quidem voluptas, sit porro est. Dolorum debitis consequuntur necessitatibus assumenda
+            fugiat
+            expedita ea molestias minus!
+        </p>
 
-    <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt quisquam dolorum mollitia
-        accusantium magni quidem voluptas, sit porro est. Dolorum debitis consequuntur necessitatibus assumenda fugiat
-        expedita ea molestias minus!
-    </p>
+        <p class="margin margin-top estilo-parrafo">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt quisquam dolorum mollitia
+            accusantium magni quidem voluptas, sit porro est. Dolorum debitis consequuntur necessitatibus assumenda
+            fugiat
+            expedita ea molestias minus!
+        </p>
+
+        <div style="font-size: 15px;">
+            <p class="estilo-parrafo">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto deserunt quisquam dolorum mollitia
+                accusantium magni quidem voluptas, sit porro est. Dolorum debitis consequuntur necessitatibus assumenda
+                fugiat
+                expedita ea molestias minus!
+            </p>
+        </div>
+    </div>
+
+
+    <main>
+        <section>
+            <article>
+                <h2 class="estilo-titulo">Titulo</h2>
+                <p class="estilo-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            </article>
+        </section>
+        <section></section>
+        <section></section>
+    </main>
 
 </body>
 
