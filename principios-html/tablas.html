@@ -35,15 +35,26 @@
         tr:nth-child(even) {
             background-color: #E3F2FD;
         }
+
+        #titulo{
+            text-align: center;
+        }
+
+        #subtitulo{
+            text-align: center;
+            color: #0D47A1;
+        }
     </style>
 </head>
 
 <body>
 
     <main>
-        <h1>
+        <h1 id="titulo">
             Tablas
         </h1>
+
+        <h2 id="subtitulo">Estilando tablas con CSS</h2>
 
         <hr>
 
@@ -53,31 +64,35 @@
                     <th>Nombre</th>
                     <th>Correo</th>
                     <th>Carrera</th>
+                    <th>Teléfono</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Juan Alvarenga</td>
                     <td>jealvarengar@unah.edu.hn</td>
-                    <td>Ing. en Sistemas</td>
+                    <td rowspan="2" >Ing. en Sistemas</td>
+                    <td>88888888</td>
                 </tr>
                 <tr>
                     <td>Juan perez</td>
                     <td>jperez@unah.edu.hn</td>
-                    <td>Ing. En Sistemas</td>
+                    <td>88888888</td>
                 </tr>
                 <tr>
                     <td>Juan perez</td>
                     <td>jperez@unah.edu.hn</td>
-                    <td>Ing. civil</td>
+                    <td rowspan="2">Ing. civil</td>
+                    <td>88888888</td>
                 </tr>
                 <tr>
                     <td>Juan perez</td>
                     <td>jperez@unah.edu.hn</td>
-                    <td>Ing. civil</td>
+                    <!-- <td>Ing. civil</td> -->
+                    <td>88888888</td>
                 </tr>
                 <tr>
-                    <td colspan="3" style="text-align: center;">
+                    <td colspan="4" style="text-align: center;">
                         UNAH-VS
                     </td>
                 </tr>
