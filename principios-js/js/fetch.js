@@ -19,20 +19,38 @@
 
 // ? una solicitud HTTP, con el verbo GET
 // * retorna una promesa ( Response )
-fetch('https://jsonplaceholder.typicode.com/users')
-    .then((response) => {
-        if (!response.ok) {
-            ///generar un error
-            throw Error(response.status + ' ' + response.statusText)
-        }
-        return response.json() // * retorna una promesa
-    })
-    .then((data) => {
-        console.log(data)
+
+// asignar al documento el evento DOMContentLoaded
+// * se ejecuta cuando el documento HTML ha sido completamente cargado y parseado
+// document.addEventListener('DOMContentLoaded', () => {
+
+function getData() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then((response) => {
+            if (!response.ok) {
+                ///generar un error
+                throw Error(response.status + ' ' + response.statusText)
+            }
+            return response.json() // * retorna una promesa
+        })
+        .then((data) => {
+            console.log(data)
 
 
 
 
-    }).catch((error) => {
-        console.log(error)
-    })
+        }).catch((error) => {
+            console.log(error)
+        })
+}
+
+// const boton_datos = document.getElementById('btnGetData')
+const cargarDatos = document.querySelector('#btnGetData')
+const lista = document.querySelector('#lista')
+// const botones = document.querySelectorAll('button')
+
+
+// asignar un evento al boton
+cargarDatos.addEventListener('click', getData)
+
+// })
