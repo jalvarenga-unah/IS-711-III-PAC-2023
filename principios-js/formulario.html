@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+
+    <h1>Formualrio</h1>
+
+    <form action="#">
+        <label>
+            Nombre:
+            <input name="nombre" type="text" placeholder="Nombre">
+        </label>
+
+        <label for="correo">Correo:</label>
+        <input id="correo" name="correo" type="email" placeholder="Correo">
+
+        <label for="telefono">Teléfono:</label>
+        <input id="telefono" name="telefono" type="tel" placeholder="Teléfono">
+
+        <select name="genero" id="genero">
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+        </select>
+
+        <input list="browsers" name="browser" id="browser">
+        <!-- equivalente al select -->
+        <datalist id="browsers">
+            <option value="Edge">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+
+    
+
+        <button type="submit">Guardar</button>
+        <!-- <input type="button"  value="Guardar"> -->
+    </form>
+
+
+    <script src="./js/formularios.js"></script>
+</body>
+
+</html>
