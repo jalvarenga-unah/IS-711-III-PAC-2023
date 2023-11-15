@@ -27,6 +27,10 @@ const mostrarPostre2 = (postre, index) => {
 //     console.log(index, postre)
 // })
 
+// for( const [index, postre] of postres){
+//     console.log(postre)
+// }
+
 // postres.forEach(mostrarPostre)
 // postres.forEach(mostrarPostre2)
 

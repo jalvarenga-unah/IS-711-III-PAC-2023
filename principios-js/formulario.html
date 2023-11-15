@@ -5,32 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 
 <body>
 
     <h1>Formualrio</h1>
 
-    <form action="#">
-        <label>
-            Nombre:
-            <input name="nombre" type="text" placeholder="Nombre">
-        </label>
-
+    <form id="formulario" action="#">
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Nombre">
+        
         <label for="correo">Correo:</label>
         <input id="correo" name="correo" type="email" placeholder="Correo">
 
         <label for="telefono">Teléfono:</label>
         <input id="telefono" name="telefono" type="tel" placeholder="Teléfono">
 
-        <select name="genero" id="genero">
+        <select id="genero">
             <option value="M">Masculino</option>
             <option value="F">Femenino</option>
         </select>
 
-        <input list="browsers" name="browser" id="browser">
+        <input list="navegadores" name="navegador" id="navegador">
         <!-- equivalente al select -->
-        <datalist id="browsers">
+        <datalist id="navegadores">
             <option value="Edge">
             <option value="Firefox">
             <option value="Chrome">
