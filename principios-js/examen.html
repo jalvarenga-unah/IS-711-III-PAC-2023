@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+
+        <input name="marca" placeholder="Marca" type="text">
+        <input placeholder="Modelo" name="modelo" type="text">
+        <input placeholder="Año" name="anio" type="text">
+        <input placeholder="Color" name="color" type="text">
+
+        <button type="submit">Guardar</button>
+        <button onclick="" id="info" type="button">mostrar info</button>
+
+    </form>
+    
+
+    <script>
+
+        const form = document.querySelector('form');
+        const botonInfo = document.querySelector('#info')
+        const lista = []
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            lista.push(data);
+        });
+
+
+    </script>
+</body>
+</html>
