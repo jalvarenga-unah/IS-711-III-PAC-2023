@@ -33,6 +33,32 @@ const server = http.createServer((request, res) => {
 
             break;
         case 'POST':
+
+            switch (url) {
+                case '/productos':
+
+                    let body = ''
+
+                    request.on('data', (chunk) => {
+                        body += chunk.toString()
+                    })
+
+                    request.on('end', () => {
+                        const data = JSON.parse(body) // convertimos el string a un objeto
+
+                        // TODO: validar que el objeto tenga todos los campos necesarios
+                        // TODO: Registrar el producto en la base de datos
+
+                        res.writeHead(201, { 'Content-Type': 'application/json' })
+
+                        data.id = 1000
+                        data.timestamp = Date.now()
+
+                        res.end(JSON.stringify(data))
+
+                    })
+                    break;
+            }
             break;
         case 'DELETE':
             break;

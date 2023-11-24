@@ -1,0 +1,13 @@
+GET http://localhost:1234/productos
+
+###
+POST http://localhost:1234/productos
+Content-Type: application/json
+
+{
+    "title": "Producto 1",
+    "price": 100,
+    "description": "Descripcion del producto 1",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+}
