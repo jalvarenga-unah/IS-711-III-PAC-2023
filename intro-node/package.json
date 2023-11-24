@@ -1,0 +1,22 @@
+{
+  "name": "intro-node",
+  "version": "1.0.0",
+  "description": "Primer API en node",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node --watch express.js"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "express",
+    "unah"
+  ],
+  "author": "Juan Alvarenga",
+  "license": "ISC",
+  "dependencies": {
+    "express": " 4.18.2"
+  }
+}
