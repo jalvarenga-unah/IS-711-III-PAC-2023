@@ -7,7 +7,41 @@ app.disable('x-powered-by')
 
 const port = 3000
 
+// Middleware para parsear el body
+
+app.use(express.json())
+
+// app.use((req, res, next) => {
+
+//     if (req.method !== 'POST') next()
+
+//     if (req.headers['content-type'] !== 'application/json') next()
+
+//     let body = ''
+
+//     req.on('data', chunk => {
+//         body += chunk.toString()
+//     })
+
+//     req.on('end', () => {
+//         try {
+//             const json = JSON.parse(body)
+
+//             req.body = json
+//             next()
+//         } catch (error) {
+//             return res.status(400).json({
+//                 success: false,
+//                 msg: 'Invalid JSON',
+//                 data: null
+//             })
+//         }
+//     })
+// })
+
 // Definiendo las rutas de mi API
+
+//CONSULTAS
 app.get('/', (req, res) => {
     res.status(200).send('<h1>Hola desde express</h1>')
 })
@@ -50,6 +84,20 @@ app.get('/productos/:id', (req, res) => {
         data: null
     })
 })
+
+//CREAR
+app.post('/productos', (req, res) => {
+
+    console.log(req.body)
+
+    res.json({
+        success: true,
+        msg: 'Producto creado',
+        data: null
+    })
+})
+
+
 
 app.listen(port, () => {
     console.log(`Server is running on port http://localhost:${port}`)

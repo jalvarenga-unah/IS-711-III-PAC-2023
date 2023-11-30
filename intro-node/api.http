@@ -1,7 +1,8 @@
-GET http://localhost:1234/productos
+GET http://localhost:3000/productos?category=men's clothing
 
-###
-POST http://localhost:1234/productos
+
+### de
+POST http://localhost:3000/productos
 Content-Type: application/json
 
 {
