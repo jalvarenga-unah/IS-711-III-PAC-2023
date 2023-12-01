@@ -1,5 +1,7 @@
 const express = require('express')
 const productos = require('./productos/productos.json')
+const { validateProduct } = require('./schemas/producto')
+const { randomUUID } = require('crypto');
 
 const app = express()
 
@@ -88,12 +90,23 @@ app.get('/productos/:id', (req, res) => {
 //CREAR
 app.post('/productos', (req, res) => {
 
-    console.log(req.body)
+    const { body } = req
+
+    const respuesta = validateProduct(body)
+
+    if (respuesta.error) {
+        return res.status(400).json(JSON.parse(respuesta.error.message))
+    }
+
+    // TODO: el insert en la base de datos (simulado)
+    const producto = { id: randomUUID(), ...respuesta.data }
+    productos.push(producto)
+
 
     res.json({
         success: true,
         msg: 'Producto creado',
-        data: null
+        data: producto
     })
 })
 
